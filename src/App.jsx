@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from './sections/Navbar'
 import Hero from './sections/Hero'
 
-const myName = "David"
+const myName = "Davidson"
 
 const App = () => {
   return (
@@ -11,9 +11,6 @@ const App = () => {
     >
       <Navbar siteName={myName} />
       <Hero name={myName} />
-      <section className="min-h-screen"></section>
-      <section className="min-h-screen"></section>
-      <section className="min-h-screen"></section>
       <section className="min-h-screen"></section>
       <section className="min-h-screen"></section>
       <section className="min-h-screen"></section>
