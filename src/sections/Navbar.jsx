@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 
-const myName = "David";
 function Navigation() {
   return (
     <ul className="nav-ul">
@@ -29,7 +28,7 @@ function Navigation() {
   );
 }
 
-const Navbar = () => {
+const Navbar = ({siteName}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -40,7 +39,7 @@ const Navbar = () => {
             href="/"
             className="text-xl font-bold transition-colors duration-300 text-neutral-400 hover:text-white"
           >
-            {myName}
+            {siteName}
           </a>
           <button
             onClick={() => setIsOpen(!isOpen)}
