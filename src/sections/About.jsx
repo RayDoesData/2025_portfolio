@@ -4,7 +4,7 @@ import { Globe } from "../components/Globe";
 import CopyEmailButton from "../components/CopyEmailButton";
 import { Frameworks } from "../components/Frameworks";
 
-const About = ({ name }) => {
+const About = ({ myName, myEmail }) => {
   const bio =
     "Over the last 3-4 years, I've developed my frontend, backend and full-stack dev skills to deliver dynamic software and web applications.";
   const locationName = "South Carolina, USA";
@@ -21,7 +21,7 @@ const About = ({ name }) => {
             className="absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"
           />
           <div className="z-10">
-            <p className="headtext">Hi, I'm {name}</p>
+            <p className="headtext">Hi, I'm {myName}</p>
             <p className="subtext">{bio}</p>
           </div>
           <div className="absolute inset-x-0 pointer-events-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
@@ -100,7 +100,7 @@ const About = ({ name }) => {
             <p className="text-center headtext">
               Let's get started on your next project!
             </p>
-            <CopyEmailButton />
+            <CopyEmailButton myEmail={myEmail} />
           </div>
         </div>
 

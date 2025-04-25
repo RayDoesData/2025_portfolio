@@ -5,22 +5,23 @@ import About from './sections/About'
 import Projects from './sections/Projects'
 import Experiences from './sections/Experiences'
 import Testimonial from './sections/Testimonial'
+import Contact from './sections/Contact'
 
 const myName = "Davidson"
+const myEmail = "davidsonf108@gmail.com"
 
 const App = () => {
   return (
     <div
-      className="container mx-auto max-w-7xl"
+      className="container mx-auto max-w-7xl mb-40"
     >
       <Navbar siteName={myName} />
       <Hero name={myName} />
-      <About name={myName} />
+      <About myName={myName} myEmail={myEmail} />
       <Projects />
       <Experiences />
       <Testimonial />
-      <section className="min-h-screen"></section>
-      {/* contact */}
+      <Contact myName={myName} myEmail={myEmail} />
       {/* footer */}
     </div>
   )
