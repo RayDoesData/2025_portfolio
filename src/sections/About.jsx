@@ -16,7 +16,7 @@ const About = () => {
   return (
     <section id="about" className="c-space section-spacing">
       <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
-        {/* Grid 1 */}
+        {/* Grid 1 - Personal Intro */}
         <div className="flex items-end grid-default-color grid-1">
           <img
             src="assets/coding-pov.png"
@@ -29,7 +29,7 @@ const About = () => {
           <div className="absolute inset-x-0 pointer-events-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
         </div>
 
-        {/* Grid 2 */}
+        {/* Grid 2 - Skills & Principles */}
         <div className="grid-default-color grid-2">
           <div
             ref={grid2Container}
@@ -81,7 +81,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* Grid 3 */}
+        {/* Grid 3 - Location */}
         <div className="grid-black-color grid-3">
           <div className="z-10 w-[50%]">
             <p className="headtext">Time Zone</p>
@@ -96,7 +96,7 @@ const About = () => {
           </figure>
         </div>
 
-        {/* Grid 4 */}
+        {/* Grid 4 - CTA */}
         <div className="grid-special-color grid-4">
           <div className="flex flex-col items-center justify-center gap-4 size-full">
             <p className="text-center headtext">
@@ -106,7 +106,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* Grid 5 */}
+        {/* Grid 5 - Tech Stack */}
         <div className="grid-default-color grid-5">
           <div className="z-10 w-[50%]">
             <p className="headtext">Tech Stack</p>
