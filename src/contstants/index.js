@@ -224,11 +224,11 @@ export const myProjects = [
 ];
 
 export const mySocials = [
-  {
-    name: "WhatsApp",
-    href: "",
-    icon: "/assets/socials/whatsApp.svg",
-  },
+  // {
+  //   name: "WhatsApp",
+  //   href: "",
+  //   icon: "/assets/socials/whatsApp.svg",
+  // },
   {
     name: "Linkedin",
     href: "https://www.linkedin.com/in/ali-sanati/",
@@ -244,35 +244,36 @@ export const mySocials = [
 export const experiences = [
   {
     title: "Software Developer",
-    job: "Security & Defense Projects",
-    date: "2021-2023",
+    job: "Mediterranean Shipping Co.",
+    date: "Jul. - Oct. 2022 ",
     contents: [
-      "Enhanced application security and developed new features, adhering to standards set by the Passive Defense Organization and National Cyberspace Center.",
-      "Designed and implemented intuitive map interfaces using MapsUI, enhancing user experience and enabling seamless interactive map integration.",
-      "Developed applications for industrial automation, leveraging C++ and the Fatek API for PLC communication.",
-      "Enhanced responsiveness and usability of applications using Windows Forms and WPF frameworks.",
-      "Executed XML to SVG conversions using X-DOM, ensuring dynamic and efficient data visualization.",
+      "Work alongside senior devs in a project-drive Agile environment",
+      "Design intuitive user interfaces for internal departments. These UIs allowed various departments in the company to interact with the massive databases.",
+      "✅ Use industry-leading tools like SSMS, Teams, Azure Dev Ops, Visual Studio and more",
+      "✅ Assess and document code, review PRs, discover and present project objectives and accomplishments.",
     ],
   },
+  // {
+  //   title: "Full Stack Developer",
+  //   job: "Select Quote Insurance",
+  //   date: "Oct. 2023 - Jan. 2025",
+  //   contents: [
+  //     "Work in a large internation dev shop, within a speficied team.",
+  //     "Follow industry best practices for working in a large and established team.",
+  //     "✅ Write testable code, create unit tests, review PRs, and contribute documentation.",
+  //     "✅ Assist in solution meetings and devops tasks like deployments, rollbacks, etc.",
+  //   ],
+  // },
   {
-    title: "Back-End Developer",
-    job: "Car Manufacture",
-    date: "2023-2024",
+    title: "Full Stack Developer",
+    job: "REV Federal Credit Union",
+    date: "Oct. 2022 - present",
     contents: [
-      "Engineered systems for large-scale data ingestion and analysis, ensuring efficient data processing and storage.",
-      "Developed back-end systems enabling vehicle-to-cloud communication for telemetry, diagnostics, and remote control:",
-      "✅ Implemented secure APIs, following ISO 26262 automotive safety standards.",
-      "✅ Ensured data privacy for customers and partners through industry-compliant protocols.",
-      "✅ Delivered remote features like over-the-air updates, real-time tracking, and remote start capabilities.",
-    ],
-  },
-  {
-    title: "Freelance Developer",
-    job: "Self-Employed",
-    date: "2025-Present",
-    contents: [
-      "Created a personal portfolio using Three.js, React, Vite, and WebAPI to showcase technical expertise.",
-      "Continuously enhancing technical skills and expanding expertise in modern web development and back-end technologies.",
+      "Work alongside senior devs in a startup dev shop environment.",
+      "Collaborate with project managers in Agile & Scrum format to maximize effeciency throughout the software development life cylce.",
+      "✅ Write testable code, create unit tests, review PRs, and contribute documentation",
+      "✅ Utilize a variety of tools and languages including Java, C# MySQL, SSMS, IBM DB2, React, Typescript, Redux, Docker, Microsoft, Azure and many more...",
+      "✅ Build a cross-department landing page to better serve customers. This project included industry-leading tools and methods like Redux Toolkit state management, Ajax, custom RBAC permissions, React, and much more...",
     ],
   },
 ];
@@ -326,3 +327,36 @@ export const reviews = [
     img: "https://robohash.org/eve",
   },
 ];
+
+export const skills = [
+  // Languages
+  {name:"Java",icon:"",}, 
+  {name:"JavaScript",icon:"assets/logos/javascript.svg",}, 
+  {name:"TypeScript",icon:"",}, 
+  {name:"C#",icon:"assets/logos/csharp.svg",}, 
+  {name:"Python",icon:"",}, 
+  {name:"MySQL",icon:"",}, 
+  {name:"IBM DB2",icon:"",}, 
+  {name:"HTML5",icon:"assets/logos/html5.svg",}, 
+  {name:"CSS3",icon:"assets/logos/css3.svg",}, 
+  // Frameworks & Libraries
+  {name:"DotNet",icon:"",}, 
+  {name:"React",icon:"assets/logos/react.svg",}, 
+  {name:"Tailwind",icon:"assets/logos/tailwindcss.svg",}, 
+  {name:"NextJs",icon:"",}, 
+  {name:"Vite",icon:"assets/logos/vitejs.svg",}, 
+  {name:"ThreeJs",icon:"assets/logos/threejs.svg",}, 
+  {name:"Django",icon:"",}, 
+  // Tools
+  {name:"Jira",icon:"",}, 
+  {name:"Confluence",icon:"",}, 
+  {name:"Microsoft",icon:"assets/logos/microsoft.svg",}, 
+  {name:"SSMS",icon:"",}, 
+  {name:"Azure",icon:"assets/logos/azure.svg",}, 
+  {name:"GitHub",icon:"assets/logos/github.svg",}, 
+  {name:"Docker",icon:"",}, 
+  {name:"Microsoft SQL Server",icon:"assets/logos/microsoftsqlserver.svg",}, 
+  {name:"VS Code",icon:"assets/logos/visualstudiocode.sgv",}, 
+  {name:"MongoDb",icon:"",}, 
+  {name:"Stripe",icon:"assets/logos/stripe.svg",}, 
+]

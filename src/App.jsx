@@ -6,6 +6,7 @@ import Projects from './sections/Projects'
 import Experiences from './sections/Experiences'
 import Testimonial from './sections/Testimonial'
 import Contact from './sections/Contact'
+import Skills from './sections/Skills'
 
 const siteName = "Morpheus Dev"
 const myEmail = "davidsonf108@gmail.com"
@@ -20,7 +21,8 @@ const App = () => {
       <About />
       <Projects />
       <Experiences />
-      <Testimonial />
+      <Skills />
+      {/* <Testimonial /> */}
       <Contact />
       {/* footer */}
     </div>
