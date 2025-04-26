@@ -5,7 +5,7 @@ import { experiences } from "../contstants";
 
 const Experiences = () => {
   return (
-    <div className="w-full overflow-hidden">
+    <div id="work" className="w-full overflow-hidden">
         <Timeline data={experiences} />
     </div>
   )

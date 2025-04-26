@@ -360,3 +360,6 @@ export const skills = [
   {name:"MongoDb",icon:"",}, 
   {name:"Stripe",icon:"assets/logos/stripe.svg",}, 
 ]
+
+
+// Portfolio Tutorial from https://www.youtube.com/watch?v=S9UQItTpwUQ&t=405s

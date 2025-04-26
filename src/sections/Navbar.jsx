@@ -28,8 +28,9 @@ function Navigation() {
   );
 }
 
-const Navbar = ({siteName}) => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const siteName = import.meta.env.VITE_SITE_NAME;
 
   return (
     <div className="fixed inset-x-0 z-20 w-full backdrop-blur-lg bg-primary/40">

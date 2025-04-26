@@ -9,16 +9,14 @@ import Contact from './sections/Contact'
 import Skills from './sections/Skills'
 
 import { myProjects } from './contstants'
-
-const siteName = "Morpheus Dev"
-const myEmail = "davidsonf108@gmail.com"
+import Footer from './sections/Footer'
 
 const App = () => {
   return (
     <div
       className="container mx-auto max-w-7xl mb-40"
     >
-      <Navbar siteName={siteName} />
+      <Navbar />
       <Hero />
       <About />
       {myProjects.length > 0 && <Projects />}
@@ -26,7 +24,7 @@ const App = () => {
       <Skills />
       {/* <Testimonial /> */}
       <Contact />
-      {/* footer */}
+      <Footer />
     </div>
   )
 }
