@@ -8,6 +8,8 @@ import Testimonial from './sections/Testimonial'
 import Contact from './sections/Contact'
 import Skills from './sections/Skills'
 
+import { myProjects } from './contstants'
+
 const siteName = "Morpheus Dev"
 const myEmail = "davidsonf108@gmail.com"
 
@@ -19,7 +21,7 @@ const App = () => {
       <Navbar siteName={siteName} />
       <Hero />
       <About />
-      <Projects />
+      {myProjects.length > 0 && <Projects />}
       <Experiences />
       <Skills />
       {/* <Testimonial /> */}
