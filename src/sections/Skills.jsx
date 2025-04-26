@@ -45,7 +45,7 @@ export default function Skills() {
             <SkillsCard key={index} {...skill} />
           ))}
         </Marquee>
-        <Marquee reverse={true} pauseOnHover className="[--duration:20s]">
+        <Marquee pauseOnHover className="[--duration:20s]">
           {secondRow.map((skill, index) => (
             <SkillsCard key={index} {...skill} />
           ))}
