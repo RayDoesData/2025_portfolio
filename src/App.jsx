@@ -21,7 +21,7 @@ const App = () => {
       <About />
       {myProjects.length > 0 && <Projects />}
       <Experiences />
-      <Skills />
+      {/* <Skills /> */}
       {/* <Testimonial /> */}
       <Contact />
       <Footer />
