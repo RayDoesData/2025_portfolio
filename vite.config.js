@@ -6,5 +6,5 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   base: "",
-  // base: "/davidson-fong-portfolio",
+  base: "/davidson-fong-portfolio",
 });
