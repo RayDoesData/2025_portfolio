@@ -2,7 +2,9 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import Alert from "../components/Alert";
 
-const Contact = ({ myName, myEmail }) => {
+const Contact = () => {
+  const myName = import.meta.env.VITE_MY_NAME;
+  const myEmail = import.meta.env.VITE_MY_EMAIL;
   const initialFormState = {
     name: "",
     email: "",

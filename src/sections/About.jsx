@@ -4,7 +4,9 @@ import { Globe } from "../components/Globe";
 import CopyEmailButton from "../components/CopyEmailButton";
 import { Frameworks } from "../components/Frameworks";
 
-const About = ({ myName, myEmail }) => {
+const About = () => {
+  const myName = import.meta.env.VITE_MY_NAME;
+  const myEmail = import.meta.env.VITE_MY_EMAIL;
   const bio =
     "Over the last 3-4 years, I've developed my frontend, backend and full-stack dev skills to deliver dynamic software and web applications.";
   const locationName = "South Carolina, USA";

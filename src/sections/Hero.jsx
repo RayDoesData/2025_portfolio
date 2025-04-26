@@ -9,7 +9,8 @@ import { useMediaQuery } from "react-responsive";
 import { easing } from "maath";
 import Loader from "../components/Loader";
 
-const Hero = ({ name }) => {
+const Hero = () => {
+  const name = import.meta.env.VITE_MY_NAME;
   const isMobile = useMediaQuery({ maxWidth: 853 });
   return (
     <section className="flex items-start justify-center md:items-start md:justify-start min-h-screen overflow-hidden c-space">

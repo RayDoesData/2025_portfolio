@@ -7,7 +7,7 @@ import Experiences from './sections/Experiences'
 import Testimonial from './sections/Testimonial'
 import Contact from './sections/Contact'
 
-const myName = "Davidson"
+const siteName = "Morpheus Dev"
 const myEmail = "davidsonf108@gmail.com"
 
 const App = () => {
@@ -15,13 +15,13 @@ const App = () => {
     <div
       className="container mx-auto max-w-7xl mb-40"
     >
-      <Navbar siteName={myName} />
-      <Hero name={myName} />
-      <About myName={myName} myEmail={myEmail} />
+      <Navbar siteName={siteName} />
+      <Hero />
+      <About />
       <Projects />
       <Experiences />
       <Testimonial />
-      <Contact myName={myName} myEmail={myEmail} />
+      <Contact />
       {/* footer */}
     </div>
   )
