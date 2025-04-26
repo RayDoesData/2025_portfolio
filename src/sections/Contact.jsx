@@ -22,7 +22,7 @@ const Contact = ({ myName, myEmail }) => {
 
   const showAlertMessage = (type, message) => {
     setAlertType(type);
-    setAlertMessage(mesage);
+    setAlertMessage(message);
     setShowAlert(true);
     setTimeout(() => {
       setShowAlert(false);
@@ -37,8 +37,8 @@ const Contact = ({ myName, myEmail }) => {
     try {
       console.log("Form submitted:", formData);
       await emailjs.send(
-        "service_mrn75ly",
-        "template_slqoswh",
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           from_name: formData.name,
           to_name: myName,
@@ -46,7 +46,7 @@ const Contact = ({ myName, myEmail }) => {
           to_email: myEmail,
           message: formData.message,
         },
-        "gxmSRvwWKgWSzJf3p"
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       );
       setIsLoading(false);
       setFormData(initialFormState);
@@ -54,12 +54,12 @@ const Contact = ({ myName, myEmail }) => {
     } catch (error) {
       setIsLoading(false);
       console.error(error);
-      showAlertMessage("danger", "Something when wrong");
+      showAlertMessage("danger", "Something went wrong");
     }
   };
 
   return (
-    <section className="relative flex items-center c-space section-space">
+    <section className="relative flex items-center c-space section-spacing">
       {showAlert && <Alert type={alertType} text={alertMessage} />}
       <div className="flex flex-col items center justify-center max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-primary">
         <div className="flex flex-col items-start w-full gap-5 mb-10">
@@ -87,7 +87,7 @@ const Contact = ({ myName, myEmail }) => {
           </div>
           {/* Email */}
           <div className="mb-5">
-            <label htmlFor="field-label">Full Name</label>
+            <label htmlFor="field-label">Email</label>
             <input
               id="email"
               name="email"
@@ -102,7 +102,7 @@ const Contact = ({ myName, myEmail }) => {
           </div>
           {/* Message */}
           <div className="mb-5">
-            <label htmlFor="field-label">Full Name</label>
+            <label htmlFor="field-label">Message</label>
             <textarea
               id="message"
               name="message"
