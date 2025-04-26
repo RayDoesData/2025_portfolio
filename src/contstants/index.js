@@ -351,7 +351,7 @@ export const skills = [
   {name:"GitHub",icon:"assets/logos/github.svg",}, 
   {name:"Docker",icon:"",}, 
   {name:"Microsoft SQL Server",icon:"assets/logos/microsoftsqlserver.svg",}, 
-  {name:"VS Code",icon:"assets/logos/visualstudiocode.sgv",}, 
+  {name:"VS Code",icon:"assets/logos/visualstudiocode.svg",}, 
   {name:"MongoDb",icon:"",}, 
   {name:"Stripe",icon:"assets/logos/stripe.svg",}, 
 ]
