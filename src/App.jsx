@@ -17,11 +17,11 @@ const App = () => {
       className="container mx-auto max-w-7xl mb-40"
     >
       <Navbar />
-      {/* <Hero /> */}
+      <Hero />
       <About />
       {myProjects.length > 0 && <Projects />}
       <Experiences />
-      {/* <Skills /> */}
+      <Skills />
       {/* <Testimonial /> */}
       <Contact />
       <Footer />
