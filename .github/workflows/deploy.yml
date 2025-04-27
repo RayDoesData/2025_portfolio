@@ -29,6 +29,13 @@ jobs:
       # Build project
       - name: Build Project
         run: npm run build
+        env:
+          VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
+          VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
+          VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}
+          VITE_SITE_NAME: ${{ secrets.VITE_SITE_NAME }}
+          VITE_MY_NAME: ${{ secrets.VITE_MY_NAME }}
+          VITE_MY_EMAIL: ${{ secrets.VITE_MY_EMAIL }}
       
       # Print Env Variables
       - name: Print Env Variables
