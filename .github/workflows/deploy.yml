@@ -32,12 +32,14 @@ jobs:
       
       # Print Env Variables
       - name: Print Env Variables
-        run: echo "EmailJS Service ID = ${{VITE_EMAILJS_SERVICE_ID}}"
-              , echo "EmailJS Template ID = ${{VITE_EMAILJS_TEMPLATE_ID}}"
-              , echo "EmailJS Public Key = ${{VITE_EMAILJS_PUBLIC_KEY}}"
-              , echo "Site Name = ${{VITE_SITE_NAME}}"
-              , echo "My Name = ${{VITE_MY_NAME}}"
-              , echo "My Email = ${{VITE_MY_EMAIL}}"
+        run: |
+          echo "EmailJS Service ID = ${{ secrets.VITE_EMAILJS_SERVICE_ID }}"
+          echo "EmailJS Template ID = ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}"
+          echo "EmailJS Public Key = ${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}"
+          echo "Site Name = ${{ secrets.VITE_SITE_NAME }}"
+          echo "My Name = ${{ secrets.VITE_MY_NAME }}"
+          echo "My Email = ${{ secrets.VITE_MY_EMAIL }}"
+
       
       # Deploy to Guithub Pages
       - name: Deploy to Guithub Pages
