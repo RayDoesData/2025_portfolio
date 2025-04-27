@@ -21,23 +21,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-      
+
       # Install Dependencies
       - name: Install Dependencies
         run: npm install
-      
-      # Build project
-      - name: Build Project
-        run: npm run build
-        env:
-          VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
-          VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
-          VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}
-          VITE_SITE_NAME: ${{ secrets.VITE_SITE_NAME }}
-          VITE_MY_NAME: ${{ secrets.VITE_MY_NAME }}
-          VITE_MY_EMAIL: ${{ secrets.VITE_MY_EMAIL }}
-      
-      # Print Env Variables
+
+      # Print Env Variables (for debugging — optional)
       - name: Print Env Variables
         run: |
           echo "EmailJS Service ID = ${{ secrets.VITE_EMAILJS_SERVICE_ID }}"
@@ -47,13 +36,20 @@ jobs:
           echo "My Name = ${{ secrets.VITE_MY_NAME }}"
           echo "My Email = ${{ secrets.VITE_MY_EMAIL }}"
 
-      
-      # Deploy to Guithub Pages
-      - name: Deploy to Guithub Pages
+      # # Build project (with env variables available)
+      # - name: Build Project
+      #   run: npm run build
+      #   env:
+      #     VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
+      #     VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
+      #     VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}
+      #     VITE_SITE_NAME: ${{ secrets.VITE_SITE_NAME }}
+      #     VITE_MY_NAME: ${{ secrets.VITE_MY_NAME }}
+      #     VITE_MY_EMAIL: ${{ secrets.VITE_MY_EMAIL }}
+
+      # Deploy to Github Pages
+      - name: Deploy to Github Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: dist
-      
-      
-      
