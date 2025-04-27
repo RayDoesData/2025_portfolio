@@ -46,6 +46,7 @@ jobs:
           VITE_SITE_NAME: ${{ secrets.VITE_SITE_NAME }}
           VITE_MY_NAME: ${{ secrets.VITE_MY_NAME }}
           VITE_MY_EMAIL: ${{ secrets.VITE_MY_EMAIL }}
+          VITE_BASE_URL: ${{ secrets.VITE_BASE_URL }}
 
       # Deploy to Github Pages
       - name: Deploy to Github Pages
