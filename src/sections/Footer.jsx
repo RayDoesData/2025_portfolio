@@ -16,11 +16,11 @@ const Footer = () => {
       </div>
       <div className="flex gap-3 items-center ">
         <a href="https://github.com/dfong108" target="_blank">
-          <FaGithub className="w-6 h-6 text-white" />
+          <FaGithub className="w-6 h-6 text-white hover:scale-110 transition-all duration-500 ease-in-out" />
         </a>
         {mySocials?.map((social, index) => (
           <a href={social.href} key={index} target="_blank">
-            <img src={social.icon} className="w-5 h-5" alt={social.name} />
+            <img src={social.icon} className="w-5 h-5 hover:scale-110 transition-all duration-500 ease-in-out" alt={social.name} />
           </a>
         ))}
       </div>
