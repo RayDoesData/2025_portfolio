@@ -238,8 +238,8 @@ export const mySocials = [
 
 export const experiences = [
   {
-    title: "Software Developer",
-    job: "Mediterranean Shipping Co.",
+    title: "Data Analyst",
+    job: "Some Madeup job bc I'm Delulu",
     date: "Jul. - Oct. 2022 ",
     contents: [
       "Work alongside senior devs in a project-drive Agile environment",
