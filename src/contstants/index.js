@@ -232,7 +232,7 @@ export const mySocials = [
   {
     name: "YouTube",
     href: "https://www.youtube.com/@RayDoesData",
-    icon: "assets/socials/youtube.svg",
+    icon: "assets/socials/youtube.png",
   },
 ];
 
@@ -313,8 +313,8 @@ export const experiences = [
 
 export const skills = [
   // Languages
-  {name:"Python",icon:"",},
-  {name:"MySQL",icon:"",}, 
+  {name:"Python",icon:"assets/logos/python.png",},
+  {name:"MySQL",icon:"assets/logos/mysql.png",}, 
   {name:"PostgreSQL",icon:"assets/logos/postgresql.png",}, 
   {name:"Git",icon:"assets/logos/git.svg",}, 
   // Frameworks & Libraries
