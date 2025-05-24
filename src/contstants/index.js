@@ -226,39 +226,39 @@ export const myProjects = [
 export const mySocials = [
   {
     name: "Linkedin",
-    href: "https://www.linkedin.com/in/davidson-fong/",
+    href: "www.linkedin.com/in/ray-fong01",
     icon: "assets/socials/linkedIn.svg",
   },
   {
-    name: "Instagram",
-    href: "https://www.instagram.com/muse.chs",
-    icon: "assets/socials/instagram.svg",
+    name: "YouTube",
+    href: "https://www.youtube.com/@RayDoesData",
+    icon: "assets/socials/youtube.svg",
   },
 ];
 
 export const experiences = [
   {
     title: "Data Analyst",
-    job: "Some Madeup job bc I'm Delulu",
-    date: "Jul. - Oct. 2022 ",
+    job: "MUSE",
+    date: "June 2023 - Present",
     contents: [
-      "Work alongside senior devs in a project-drive Agile environment",
-      "Design intuitive user interfaces for internal departments. These UIs allowed various departments in the company to interact with the massive databases.",
-      "✅ Use industry-leading tools like SSMS, Teams, Azure Dev Ops, Visual Studio and more",
-      "✅ Assess and document code, review PRs, discover and present project objectives and accomplishments.",
+      "Implemented SEO strategies increasing organic traffic by 12% within six months",
+      "Developed dashboards to visualize KPIs, improving data accessibility and comprehension.",
+      "✅ Use industry-leading tools like MySQL, Python, Slack, Visual Studio and more",
+      "✅ Monitor user behavior, performance trends, and present project objectives.",
     ],
   },
-  // {
-  //   title: "Full Stack Developer",
-  //   job: "Select Quote Insurance",
-  //   date: "Oct. 2023 - Jan. 2025",
-  //   contents: [
-  //     "Work in a large internation dev shop, within a speficied team.",
-  //     "Follow industry best practices for working in a large and established team.",
-  //     "✅ Write testable code, create unit tests, review PRs, and contribute documentation.",
-  //     "✅ Assist in solution meetings and devops tasks like deployments, rollbacks, etc.",
-  //   ],
-  // },
+  {
+    title: "Project Coordinator",
+    job: "ATI Restoration",
+    date: "May 2022 - Feb. 2023",
+    contents: [
+      "Managed AR/AP reconciliation, budget auditing, and identified discrepancies.",
+      "Created project tracking dashboards to support cross-team communication.",
+      "✅ Write testable code, create unit tests, review PRs, and contribute documentation.",
+      "✅ Assist in project management and tasks like scheduling, deliveries, etc.",
+    ],
+  },
   {
     title: "Full Stack Developer",
     job: "REV Federal Credit Union",
@@ -272,88 +272,72 @@ export const experiences = [
     ],
   },
 ];
-export const reviews = [
-  {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: "https://robohash.org/jack",
-  },
-  {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: "https://robohash.org/jill",
-  },
-  {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://robohash.org/john",
-  },
-  {
-    name: "Alice",
-    username: "@alice",
-    body: "This is hands down the best thing I've experienced. Highly recommend!",
-    img: "https://robohash.org/alice",
-  },
-  {
-    name: "Bob",
-    username: "@bob",
-    body: "Incredible work! The attention to detail is phenomenal.",
-    img: "https://robohash.org/bob",
-  },
-  {
-    name: "Charlie",
-    username: "@charlie",
-    body: "This exceeded all my expectations. Absolutely stunning!",
-    img: "https://robohash.org/charlie",
-  },
-  {
-    name: "Dave",
-    username: "@dave",
-    body: "Simply breathtaking. The best decision I've made in a while.",
-    img: "https://robohash.org/dave",
-  },
-  {
-    name: "Eve",
-    username: "@eve",
-    body: "So glad I found this. It has changed the game for me.",
-    img: "https://robohash.org/eve",
-  },
-];
+// export const reviews = [
+//   {
+//     name: "Jack",
+//     username: "@jack",
+//     body: "I've never seen anything like this before. It's amazing. I love it.",
+//     img: "https://robohash.org/jack",
+//   },
+//   {
+//     name: "Jill",
+//     username: "@jill",
+//     body: "I don't know what to say. I'm speechless. This is amazing.",
+//     img: "https://robohash.org/jill",
+//   },
+//   {
+//     name: "John",
+//     username: "@john",
+//     body: "I'm at a loss for words. This is amazing. I love it.",
+//     img: "https://robohash.org/john",
+//   },
+//   {
+//     name: "Alice",
+//     username: "@alice",
+//     body: "This is hands down the best thing I've experienced. Highly recommend!",
+//     img: "https://robohash.org/alice",
+//   },
+//   {
+//     name: "Bob",
+//     username: "@bob",
+//     body: "Incredible work! The attention to detail is phenomenal.",
+//     img: "https://robohash.org/bob",
+//   },
+//   {
+//     name: "Charlie",
+//     username: "@charlie",
+//     body: "This exceeded all my expectations. Absolutely stunning!",
+//     img: "https://robohash.org/charlie",
+//   },
+//   {
+//     name: "Dave",
+//     username: "@dave",
+//     body: "Simply breathtaking. The best decision I've made in a while.",
+//     img: "https://robohash.org/dave",
+//   },
+//   {
+//     name: "Eve",
+//     username: "@eve",
+//     body: "So glad I found this. It has changed the game for me.",
+//     img: "https://robohash.org/eve",
+//   },
+// ];
 
 export const skills = [
   // Languages
-  {name:"Java",icon:"",}, 
-  {name:"JavaScript",icon:"assets/logos/javascript.svg",}, 
-  {name:"TypeScript",icon:"",}, 
-  {name:"C#",icon:"assets/logos/csharp.svg",}, 
-  {name:"Python",icon:"",}, 
-  {name:"MySQL",icon:"",}, 
-  {name:"IBM DB2",icon:"",}, 
-  {name:"HTML5",icon:"assets/logos/html5.svg",}, 
-  {name:"CSS3",icon:"assets/logos/css3.svg",}, 
+  {name:"Python",icon:"assets/logos/python.svg",},
+  {name:"MySQL",icon:"assets/logos/mysql.svg",}, 
+  {name:"PostgreSQL",icon:"assets/logos/postgresql.svg",}, 
+  {name:"Git",icon:"assets/logos/git.svg",}, 
   // Frameworks & Libraries
-  {name:"DotNet",icon:"",}, 
-  {name:"React",icon:"assets/logos/react.svg",}, 
-  {name:"Tailwind",icon:"assets/logos/tailwindcss.svg",}, 
-  {name:"NextJs",icon:"",}, 
-  {name:"Vite",icon:"assets/logos/vitejs.svg",}, 
-  {name:"ThreeJs",icon:"assets/logos/threejs.svg",}, 
-  {name:"Django",icon:"",}, 
+  {name:"Pandas",icon:"assets/logos/pandas.svg",},
   // Tools
-  {name:"Jira",icon:"",}, 
-  {name:"Confluence",icon:"",}, 
+  {name:"JupyterNotebooks",icon:"assets/logos/jupyternotebooks.svg",},
   {name:"Microsoft",icon:"assets/logos/microsoft.svg",}, 
-  {name:"SSMS",icon:"",}, 
-  {name:"Azure",icon:"assets/logos/azure.svg",}, 
-  {name:"GitHub",icon:"assets/logos/github.svg",}, 
-  {name:"Docker",icon:"",}, 
-  {name:"Microsoft SQL Server",icon:"assets/logos/microsoftsqlserver.svg",}, 
-  {name:"VS Code",icon:"assets/logos/visualstudiocode.svg",}, 
-  {name:"MongoDb",icon:"",}, 
-  {name:"Stripe",icon:"assets/logos/stripe.svg",}, 
+  {name:"PowerBI",icon:"assets/logos/powerbi.svg",}, 
+  {name:"Tableau",icon:"assets/logos/azure.svg",}, 
+  {name:"GitHub",icon:"assets/logos/github.svg",},
+  {name:"VS Code",icon:"assets/logos/visualstudiocode.svg",},
 ]
 
 

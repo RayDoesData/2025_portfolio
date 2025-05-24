@@ -8,7 +8,7 @@ const About = () => {
   const myName = import.meta.env.VITE_MY_NAME;
   const myEmail = import.meta.env.VITE_MY_EMAIL;
   const bio =
-    "Over the last 3-4 years, I've developed my frontend, backend and full-stack dev skills to deliver dynamic software and web applications.";
+    "I've spent the past 2 years developing my skills in data analysis and data visualization to provide practical and accurate insights.";
   const locationName = "South Carolina, USA";
 
   const grid2Container = useRef();
@@ -36,47 +36,47 @@ const About = () => {
             className="flex items-center justify-center w-full h-full"
           >
             <p className="flex items-end text-5xl text-gray-500">
-              CODE IS CRAFT
+              MAKE SENSE OF THE MESS
             </p>
             <Card
               containerRef={grid2Container}
               style={{ rotate: "75deg", top: "30%", left: "20%" }}
-              text="GRASP"
+              text="SQL"
             />
             <Card
               containerRef={grid2Container}
               style={{ rotate: "-30deg", top: "60%", left: "45%" }}
-              text="SOLID"
+              text="ETL"
             />
             <Card
               containerRef={grid2Container}
               style={{ rotate: "90deg", bottom: "30%", left: "70%" }}
-              text="Design Patterns"
+              text="Python"
             />
             <Card
               containerRef={grid2Container}
               style={{ rotate: "-45deg", top: "55%", left: "0%" }}
-              text="Design Principles"
+              text="PowerBI"
             />
             <Card
               containerRef={grid2Container}
               style={{ rotate: "20deg", top: "10%", left: "38%" }}
-              text="SRP"
+              text="Tableau"
             />
             <Card
               containerRef={grid2Container}
               style={{ rotate: "30deg", top: "70%", left: "70%" }}
-              image="assets/logos/csharp-pink.png"
+              image="assets/logos/excel-pink.png"
             />
             <Card
               containerRef={grid2Container}
               style={{ rotate: "-45deg", top: "70%", left: "25%" }}
-              image="assets/logos/dotnet-pink.png"
+              image="assets/logos/google-pink.png"
             />
             <Card
               containerRef={grid2Container}
               style={{ rotate: "-45deg", top: "5%", left: "10%" }}
-              image="assets/logos/blazor-pink.png"
+              image="assets/logos/vscode-pink.png"
             />
           </div>
         </div>
@@ -86,9 +86,9 @@ const About = () => {
           <div className="z-10 w-[50%]">
             <p className="headtext">Time Zone</p>
             <p className="">
-              I'm based in
+              I am based in
               <span className="text-indigo-300 font-bold"> {locationName}</span>
-              , and open to remote work world-wide
+              , and open to international remote work.
             </p>
           </div>
           <figure className="absolute left-[30%] top-[10%]">
@@ -109,10 +109,10 @@ const About = () => {
         {/* Grid 5 - Tech Stack */}
         <div className="grid-default-color grid-5">
           <div className="z-10 w-[50%]">
-            <p className="headtext">Tech Stack</p>
+            <p className="headtext">How I Do It</p>
             <p className="subtext">
-              I specialize in a variety of languages, frameworks, and tools that
-              allow me to build robust and scalable applications
+              I specialize in a variety of languages and tools that
+              allow me to supply relevant and useable results.
             </p>
           </div>
           <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
