@@ -316,16 +316,16 @@ export const skills = [
   {name:"Python",icon:"assets/logos/python.png",},
   {name:"MySQL",icon:"assets/logos/mysql.png",}, 
   {name:"PostgreSQL",icon:"assets/logos/postgresql.png",}, 
-  {name:"Git",icon:"assets/logos/git.svg",}, 
+  {name:"Git",icon:"assets/logos/git.png",}, 
   // Frameworks & Libraries
   {name:"Pandas",icon:"assets/logos/pandas.png",},
   // Tools
-  {name:"JupyterNotebooks",icon:"assets/logos/jupyternotebooks.png",},
-  {name:"Microsoft",icon:"assets/logos/microsoft.svg",}, 
+  {name:"Jupyter Notebook",icon:"assets/logos/jupyternotebooks.png",},
+  {name:"Microsoft",icon:"assets/logos/microsoft.png",}, 
   {name:"PowerBI",icon:"assets/logos/powerbi.png",}, 
-  {name:"Tableau",icon:"assets/logos/tableau.svg",}, 
-  {name:"GitHub",icon:"assets/logos/github.svg",},
-  {name:"VS Code",icon:"assets/logos/visualstudiocode.svg",},
+  {name:"Tableau",icon:"assets/logos/tableau.png",}, 
+  {name:"GitHub",icon:"assets/logos/github.png",},
+  {name:"VS Code",icon:"assets/logos/visualstudiocode.png",},
 ]
 
 
