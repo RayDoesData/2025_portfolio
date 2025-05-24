@@ -3,7 +3,7 @@ import { FlipWords } from "./FlipWords";
 import { motion } from "motion/react";
 
 const HeroText = ({ name }) => {
-  const words = ["Secure", "Modern", "Scalable"];
+  const words = ["Clear", "Valuable", "Actionable"];
   const variants = {
     hidden: { opacity: 0, x: -50 },
     visible: { opacity: 1, x: 0 },
@@ -30,7 +30,7 @@ const HeroText = ({ name }) => {
             animate="visible"
             transition={{ delay: 1.2 }}
           >
-            A Developer <br /> Dedicated to Crafting
+            A Data Analyst <br /> Committed to Delivering
           </motion.p>
           <motion.div
             variants={variants}
