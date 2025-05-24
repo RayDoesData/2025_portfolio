@@ -259,19 +259,7 @@ export const experiences = [
       "✅ Assist in project management and tasks like scheduling, deliveries, etc.",
     ],
   },
-  {
-    title: "Full Stack Developer",
-    job: "REV Federal Credit Union",
-    date: "Oct. 2022 - present",
-    contents: [
-      "Work alongside senior devs in a startup dev shop environment.",
-      "Collaborate with project managers in Agile & Scrum format to maximize effeciency throughout the software development life cylce.",
-      "✅ Write testable code, create unit tests, review PRs, and contribute documentation",
-      "✅ Utilize a variety of tools and languages including Java, C# MySQL, SSMS, IBM DB2, React, Typescript, Redux, Docker, Microsoft, Azure and many more...",
-      "✅ Build a cross-department landing page to better serve customers. This project included industry-leading tools and methods like Redux Toolkit state management, Ajax, custom RBAC permissions, React, and much more...",
-    ],
-  },
-];
+]
 // export const reviews = [
 //   {
 //     name: "Jack",
@@ -325,17 +313,17 @@ export const experiences = [
 
 export const skills = [
   // Languages
-  {name:"Python",icon:"assets/logos/python.svg",},
-  {name:"MySQL",icon:"assets/logos/mysql.svg",}, 
-  {name:"PostgreSQL",icon:"assets/logos/postgresql.svg",}, 
+  {name:"Python",icon:"",},
+  {name:"MySQL",icon:"",}, 
+  {name:"PostgreSQL",icon:"assets/logos/postgresql.png",}, 
   {name:"Git",icon:"assets/logos/git.svg",}, 
   // Frameworks & Libraries
-  {name:"Pandas",icon:"assets/logos/pandas.svg",},
+  {name:"Pandas",icon:"assets/logos/pandas.png",},
   // Tools
-  {name:"JupyterNotebooks",icon:"assets/logos/jupyternotebooks.svg",},
+  {name:"JupyterNotebooks",icon:"assets/logos/jupyternotebooks.png",},
   {name:"Microsoft",icon:"assets/logos/microsoft.svg",}, 
-  {name:"PowerBI",icon:"assets/logos/powerbi.svg",}, 
-  {name:"Tableau",icon:"assets/logos/azure.svg",}, 
+  {name:"PowerBI",icon:"assets/logos/powerbi.png",}, 
+  {name:"Tableau",icon:"assets/logos/tableau.svg",}, 
   {name:"GitHub",icon:"assets/logos/github.svg",},
   {name:"VS Code",icon:"assets/logos/visualstudiocode.svg",},
 ]

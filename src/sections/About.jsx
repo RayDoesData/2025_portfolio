@@ -36,7 +36,7 @@ const About = () => {
             className="flex items-center justify-center w-full h-full"
           >
             <p className="flex items-end text-5xl text-gray-500">
-              MAKE SENSE OF THE MESS
+              GET THE MESS
             </p>
             <Card
               containerRef={grid2Container}

@@ -50,7 +50,7 @@ const HeroText = ({ name }) => {
             animate="visible"
             transition={{ delay: 1.8 }}
           >
-            Web Solutions
+            Reporting
           </motion.p>
         </div>
       </div>
