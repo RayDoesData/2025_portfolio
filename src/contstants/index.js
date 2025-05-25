@@ -232,7 +232,7 @@ export const mySocials = [
   {
     name: "YouTube",
     href: "https://www.youtube.com/@RayDoesData",
-    icon: "assets/socials/youtube.png",
+    icon: "assets/socials/youtube.svg",
   },
 ];
 
