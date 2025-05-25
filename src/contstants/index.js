@@ -315,7 +315,7 @@ export const skills = [
   // Languages
   {name:"Python",icon:"assets/logos/python.png",},
   {name:"MySQL",icon:"assets/logos/mysql.png",}, 
-  {name:"PostgreSQL",icon:"assets/logos/postgresql.png",}, 
+  {name:"PostgreSQL",icon:"assets/logos/postgres.png",}, 
   {name:"Git",icon:"assets/logos/git.svg",}, 
   // Frameworks & Libraries
   {name:"Pandas",icon:"assets/logos/pandas.png",},

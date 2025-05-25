@@ -76,7 +76,7 @@ const About = () => {
             <Card
               containerRef={grid2Container}
               style={{ rotate: "-45deg", top: "5%", left: "10%" }}
-              image="assets/logos/visualstudiocode.svg"
+              image="assets/logos/vscode-pink.png"
             />
           </div>
         </div>
