@@ -232,7 +232,7 @@ export const mySocials = [
   {
     name: "YouTube",
     href: "https://www.youtube.com/@RayDoesData",
-    icon: "assets/socials/youtube.svg",
+    icon: "assets/socials/youtube.png",
   },
 ];
 
@@ -314,16 +314,16 @@ export const experiences = [
 export const skills = [
   // Languages
   {name:"Python",icon:"assets/logos/python.png",},
-  {name:"MySQL",icon:"assets/logos/mysql.png",}, 
-  {name:"PostgreSQL",icon:"assets/logos/postgres.png",}, 
+  {name:"MySQL",icon:"assets/logos/mysql.svg",}, 
+  {name:"PostgreSQL",icon:"assets/logos/postgres.svg",}, 
   {name:"Git",icon:"assets/logos/git.svg",}, 
   // Frameworks & Libraries
-  {name:"Pandas",icon:"assets/logos/pandas.png",},
+  {name:"Pandas",icon:"assets/logos/pandas.svg",},
   // Tools
   {name:"Jupyter Notebook",icon:"assets/logos/jupyter.png",},
   {name:"Microsoft",icon:"assets/logos/microsoft.svg",}, 
   {name:"PowerBI",icon:"assets/logos/powerbi.png",}, 
-  {name:"Tableau",icon:"assets/logos/tableau.png",}, 
+  {name:"Tableau",icon:"assets/logos/tableau.svg",}, 
   {name:"GitHub",icon:"assets/logos/github.svg",},
   {name:"VS Code",icon:"assets/logos/visualstudiocode.svg",},
 ]
