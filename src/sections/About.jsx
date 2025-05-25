@@ -109,10 +109,11 @@ const About = () => {
         {/* Grid 5 - Tech Stack */}
         <div className="grid-default-color grid-5">
           <div className="z-10 w-[50%]">
-            <p className="headtext">How I Do It</p>
+            <p className="headtext">See What I Can Do</p>
             <p className="subtext">
-              I specialize in a variety of languages and tools that
-              allow me to supply relevant and useable results.
+              To see my skills in action, please see my YouTube channel
+              and GitHub. Let's connect professionally on LinkedIn!
+              All are linked at the bottom of the page.
             </p>
           </div>
           <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
