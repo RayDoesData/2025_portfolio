@@ -94,7 +94,7 @@ const HeroText = ({ name }) => {
             animate="visible"
             transition={{ delay: 1.8 }}
           >
-            Web Applications
+            Reporting
           </motion.p>
         </div>
       </div>

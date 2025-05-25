@@ -253,7 +253,7 @@ export const experiences = [
     job: "ATI Restoration",
     date: "May 2022 - Feb. 2023",
     contents: [
-      "Managed AR/AP reconciliation, budget auditing, and identified discrepancies.",
+      "Managed AR/AP reconciliation, budget auditing, and identified financial discrepancies.",
       "Created project tracking dashboards to support cross-team communication.",
       "✅ Write testable code, create unit tests, review PRs, and contribute documentation.",
       "✅ Assist in project management and tasks like scheduling, deliveries, etc.",
