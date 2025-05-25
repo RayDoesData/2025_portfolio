@@ -232,7 +232,7 @@ export const mySocials = [
   {
     name: "YouTube",
     href: "https://www.youtube.com/@RayDoesData",
-    icon: "assets/socials/youtube.png",
+    icon: "assets/socials/youtube.svg",
   },
 ];
 
@@ -320,7 +320,7 @@ export const skills = [
   // Frameworks & Libraries
   {name:"Pandas",icon:"assets/logos/pandas.png",},
   // Tools
-  {name:"Jupyter Notebook",icon:"assets/logos/jupyternotebooks.png",},
+  {name:"Jupyter Notebook",icon:"assets/logos/jupyter.png",},
   {name:"Microsoft",icon:"assets/logos/microsoft.svg",}, 
   {name:"PowerBI",icon:"assets/logos/powerbi.png",}, 
   {name:"Tableau",icon:"assets/logos/tableau.png",}, 
