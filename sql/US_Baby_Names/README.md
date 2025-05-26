@@ -1,0 +1,13 @@
+# US Baby Names Trends (PostgreSQL)
+
+Analyzed U.S. baby name trends from 1980–2020 using SQL.  
+Explored most popular names by gender, year, and region.
+
+## Tools
+- PostgreSQL (CTEs, window functions, joins)
+- Python (data cleaning & importing)
+
+## Highlights
+- Cleaned over 2 million records
+- Found most popular names by region
+- Created reusable query templates
