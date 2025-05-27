@@ -1,6 +1,6 @@
 # US Baby Names Trends (PostgreSQL)
 
-Analyzed U.S. baby name trends from 1980–2020 using SQL.  
+Analyzed U.S. baby name trends from 1980–2010 using SQL.  
 Explored most popular names by gender, year, and region.
 
 ## Tools
