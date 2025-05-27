@@ -18,7 +18,7 @@ CREATE TABLE regions (
 psql - h localhost - U postgres - d portfolio
 
 -- 2. READ FILE FROM MACOS TO WRITE INTO NAMES TABLE
-\ copy names(state, gender, year, name, births)
+\copy names(state, gender, year, name, births)
 FROM '/Users/sofo/dev/projects/portfolio/sql/US_Baby_Names/names_data_clean.csv' DELIMITER ',' CSV HEADER;
 
 -- 3. ERROR RECEIVED FROM TERMINAL
@@ -94,52 +94,30 @@ VALUES
 Objective 1: Track changes in name popularity 
 
 -- Find the overall most popular girl and boy names and show how they have changed in popularity rankings over the years
-    WITH total_births AS (
-        SELECT gender,
+    WITH year_name_totals AS (
+        SELECT
+            year,
+            gender,
             name,
             SUM(births) AS total_births
         FROM names
-        GROUP BY gender,
-            name
+        GROUP BY year, gender, name
     ),
-    top_names AS (
-        SELECT gender,
-            name
-        FROM (
-                SELECT gender,
-                    name,
-                    RANK() OVER (
-                        PARTITION BY gender
-                        ORDER BY SUM(births) DESC
-                    ) AS name_rank
-                FROM names
-                GROUP BY gender,
-                    name
-            ) ranked_names
-        WHERE name_rank = 1
-    ),
-    yearly_ranks AS (
-        SELECT year,
+    ranked_names AS (
+        SELECT
+            year,
             gender,
             name,
-            births,
+            total_births,
             RANK() OVER (
-                PARTITION BY gender,
-                year
-                ORDER BY births DESC
+                PARTITION BY year, gender
+                ORDER BY total_births DESC
             ) AS rank_in_year
-        FROM names
+        FROM year_name_totals
     )
-    SELECT yr.year,
-        yr.gender,
-        yr.name,
-        yr.births,
-        yr.rank_in_year
-    FROM yearly_ranks yr
-        JOIN top_names tn ON yr.gender = tn.gender
-        AND yr.name = tn.name
-    ORDER BY yr.gender,
-        yr.year;
+    SELECT *
+    FROM ranked_names
+    ORDER BY gender, year, rank_in_year;
 
 --Find the names with the biggest jumps (increase) in popularity from the first year of the data set to the last year
     WITH yearly_totals AS (
@@ -246,89 +224,95 @@ Objective 2: Compare popularity across decades
 
 Objective 3: Compare popularity across regions
 
--- Return the number of babies born in each of the six regions
-    SELECT
+-- Return the number of babies born in each of the six regions per year, per gender
+    SELECT    
         r.region,
+        n.year,
+        n.gender,
         SUM(n.births) AS total_births
     FROM
         names n
     JOIN
         regions r ON n.state = r.state
     GROUP BY
-        r.region
+        r.region, n.year, n.gender
     ORDER BY
-        total_births DESC;
+        r.region, n.year, n.gender;
 
--- Return the 3 most popular girl names and 3 most popular boy names within each region
-    WITH ranked_names AS (
-        SELECT
-            r.region,
-            n.gender,
-            n.name,
-            SUM(n.births) AS total_births,
-            RANK() OVER (
-                PARTITION BY r.region, n.gender
-                ORDER BY SUM(n.births) DESC
-            ) AS name_rank
-        FROM
-            names n
-        JOIN
-            regions r ON n.state = r.state
-        GROUP BY
-            r.region, n.gender, n.name
-    )
-
+-- Return the 3 most popular girl names and 3 most popular boy names within each region per year
+   WITH ranked_names AS (
     SELECT
-        region,
-        gender,
-        name,
-        total_births,
-        name_rank
+        r.region,
+        n.year,
+        n.gender,
+        n.name,
+        SUM(n.births) AS total_births,
+        RANK() OVER (
+            PARTITION BY r.region, n.year, n.gender
+            ORDER BY SUM(n.births) DESC
+        ) AS name_rank
     FROM
-        ranked_names
-    WHERE
-        name_rank <= 3
-    ORDER BY
-        region, gender, name_rank;
+        names n
+    JOIN
+        regions r ON n.state = r.state
+    GROUP BY
+        r.region, n.year, n.gender, n.name
+)
+
+SELECT
+    region,
+    year,
+    gender,
+    name,
+    total_births,
+    name_rank
+FROM
+    ranked_names
+WHERE
+    name_rank <= 3
+ORDER BY
+    region, year, gender, name_rank;
+
 
 
 Objective 4: Explore unique names
 
 -- Find the 10 most popular androgynous names
-    WITH gender_totals AS (
-        SELECT 
-            name,
-            gender,
-            SUM(births) AS total_births
-        FROM names
-        GROUP BY name, gender
+    WITH ranked_names AS (
+        SELECT
+            n.name,
+            n.gender,
+            SUM(n.births) AS total_births
+        FROM names n
+        GROUP BY n.name, n.gender
     ),
     pivoted AS (
         SELECT
             name,
             MAX(CASE WHEN gender = 'F' THEN total_births ELSE 0 END) AS female_births,
             MAX(CASE WHEN gender = 'M' THEN total_births ELSE 0 END) AS male_births
-        FROM gender_totals
+        FROM ranked_names
         GROUP BY name
     ),
-    androgynous_names AS (
-        SELECT 
+    androgynous_scores AS (
+        SELECT
             name,
             female_births,
             male_births,
-            female_births + male_births AS total_births,
-            ABS(female_births - male_births) AS gender_gap
+            ABS(female_births - male_births) AS gender_gap,
+            (female_births + male_births) AS total_births
         FROM pivoted
         WHERE female_births > 0 AND male_births > 0
     )
-    SELECT 
+
+    SELECT
         name,
         female_births,
         male_births,
-        total_births,
-        gender_gap
-    FROM androgynous_names
-    ORDER BY gender_gap ASC, total_births DESC
+        gender_gap,
+        total_births
+    FROM androgynous_scores
+    ORDER BY total_births DESC
     LIMIT 10;
 
 -- Find the length of the shortest and longest names, and identify the most popular short names and long names
@@ -364,42 +348,46 @@ Objective 4: Explore unique names
     FROM popular_extreme_names
     ORDER BY name_length, total_births DESC;
 
--- The founder of Maven Analytics is named Chris. Find the state with the highest percent of babies named "Chris"
-    WITH state_totals AS (
-        SELECT 
-            state,
-            SUM(births) AS total_births
-        FROM names
-        GROUP BY state
-    ),
-    chris_counts AS (
-        SELECT 
-            state,
-            SUM(births) AS chris_births
-        FROM names
-        WHERE name = 'Chris'
-        GROUP BY state
-    ),
-    chris_percentages AS (
-        SELECT 
-            st.state,
-            cc.chris_births,
-            st.total_births,
-            ROUND((cc.chris_births::DECIMAL / st.total_births) * 100, 5) AS chris_percentage
-        FROM state_totals st
-        JOIN chris_counts cc ON st.state = cc.state
-    )
-    SELECT 
+-- Find the state with the highest percent of babies named "Michael" and the top 5 years where the most Michaels were born + genders
+
+WITH michaels_by_state AS (
+    SELECT
         state,
-        chris_births,
-        total_births,
-        chris_percentage
-    FROM chris_percentages
-    ORDER BY chris_percentage DESC
-    LIMIT 1;
+        SUM(births) AS michael_births
+    FROM names
+    WHERE name = 'Michael'
+    GROUP BY state
+),
+total_by_state AS (
+    SELECT
+        state,
+        SUM(births) AS total_births
+    FROM names
+    GROUP BY state
+),
+michael_percentages AS (
+    SELECT
+        m.state,
+        m.michael_births,
+        t.total_births,
+        ROUND(100.0 * m.michael_births::numeric / t.total_births, 4) AS michael_pct
+    FROM michaels_by_state m
+    JOIN total_by_state t ON m.state = t.state
+)
+SELECT *
+FROM michael_percentages
+ORDER BY michael_pct DESC
+LIMIT 1;
 
-
-
+SELECT
+    year,
+    gender,
+    SUM(births) AS total_michaels
+FROM names
+WHERE name = 'Michael'
+GROUP BY year, gender
+ORDER BY total_michaels DESC
+LIMIT 5;
 
 
 
