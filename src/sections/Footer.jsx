@@ -15,21 +15,24 @@ const Footer = () => {
         <p> Privacy Policy</p>
       </div>
       <div className="flex gap-3 items-center ">
-       <a 
-      href="https://github.com/RayDoesData/portfolio" 
-      target="_blank" 
-      rel="noopener noreferrer"
-      className="flex gap-1 items-center"
-    >
-      <FaGithub className="w-6 h-6 text-white hover:scale-110 transition-all duration-500 ease-in-out" />
-      GitHub
+     <div className="flex gap-3 items-center">
+  <a 
+    href="https://github.com/RayDoesData/portfolio" 
+    target="_blank" 
+    rel="noopener noreferrer"
+  >
+    <FaGithub className="w-6 h-6 text-white hover:scale-110 transition-all duration-500 ease-in-out" />
+  </a>
+  {mySocials?.map((social, index) => (
+    <a href={social.href} key={index} target="_blank">
+      <img 
+        src={social.icon} 
+        className="w-5 h-5 hover:scale-110 transition-all duration-500 ease-in-out" 
+        alt={social.name} 
+      />
     </a>
-        {mySocials?.map((social, index) => (
-          <a href={social.href} key={index} target="_blank">
-            <img src={social.icon} className="w-5 h-5 hover:scale-110 transition-all duration-500 ease-in-out" alt={social.name} />
-          </a>
-        ))}
-      </div>
+  ))}
+</div>
       <p className="">
         © {currentYear} {siteName} All Rights Reserved
       </p>
