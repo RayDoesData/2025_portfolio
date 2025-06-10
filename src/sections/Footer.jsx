@@ -17,7 +17,7 @@ const Footer = () => {
       </div>
       <div className="flex gap-3 items-center">
         <a
-          href="https://github.com/RayDoesData/portfolio"
+          href="https://github.com/RayDoesData"
           target="_blank"
           rel="noopener noreferrer"
         >
