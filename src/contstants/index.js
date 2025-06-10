@@ -244,7 +244,7 @@ export const experiences = [
     contents: [
       "Implemented SEO strategies increasing organic traffic by 12% within six months",
       "Developed dashboards to visualize KPIs, improving data accessibility and comprehension.",
-      "✅ Use industry-leading tools like PostgreSQL, Python, PowerBI, Slack, Visual Studio and more",
+      "✅ Use industry-leading tools like PostgreSQL, Python, PowerBI, AWS, and more",
       "✅ Monitor user behavior, performance trends, and present project objectives.",
     ],
   },
