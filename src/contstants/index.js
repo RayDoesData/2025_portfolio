@@ -326,6 +326,7 @@ export const skills = [
   , {name:"AWS",icon:"assets/logos/aws.png",},
   {name:"Azure",icon:"assets/logos/azure.png",},  
   {name:"Jupyter Notebook",icon:"assets/logos/jupyter.png",},
+  {name:"Excel",icon:"assets/logos/excel.svg",},
   {name:"Snowflake",icon:"assets/logos/snowflake.svg",},  
   {name:"PowerBI",icon:"assets/logos/powerbi.png",}, 
   {name:"Tableau",icon:"assets/logos/tableau.svg",}, 
