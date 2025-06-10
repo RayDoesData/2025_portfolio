@@ -320,9 +320,14 @@ export const skills = [
   {name:"Git",icon:"assets/logos/git.svg",}, 
   // Frameworks & Libraries
   {name:"Pandas",icon:"assets/logos/pandas.svg",},
+  {name:"NumPy",icon:"assets/logos/numpy.png",},
+  {name:"Matplotlib",icon:"assets/logos/matplotlib.png",}
   // Tools
+  {name:"AWS",icon:"assets/logos/aws.png",},
+  {name:"Azure",icon:"assets/logos/png",},  
   {name:"Jupyter Notebook",icon:"assets/logos/jupyter.png",},
-  {name:"Microsoft",icon:"assets/logos/microsoft.svg",}, 
+  {name:"Excel",icon:"assets/logos/excel.png",},
+  {name:"Snowflake",icon:"assets/logos/snowflake.svg",},  
   {name:"PowerBI",icon:"assets/logos/powerbi.png",}, 
   {name:"Tableau",icon:"assets/logos/tableau.svg",}, 
   {name:"GitHub",icon:"assets/logos/github.svg",},
