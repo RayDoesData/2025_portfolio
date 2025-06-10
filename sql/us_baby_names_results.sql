@@ -350,44 +350,44 @@ Objective 4: Explore unique names
 
 -- Find the state with the highest percent of babies named "Michael" and the top 5 years where the most Michaels were born + genders
 
-WITH michaels_by_state AS (
+    WITH michaels_by_state AS (
+        SELECT
+            state,
+            SUM(births) AS michael_births
+        FROM names
+        WHERE name = 'Michael'
+        GROUP BY state
+    ),
+    total_by_state AS (
+        SELECT
+            state,
+            SUM(births) AS total_births
+        FROM names
+        GROUP BY state
+    ),
+    michael_percentages AS (
+        SELECT
+            m.state,
+            m.michael_births,
+            t.total_births,
+            ROUND(100.0 * m.michael_births::numeric / t.total_births, 4) AS michael_pct
+        FROM michaels_by_state m
+        JOIN total_by_state t ON m.state = t.state
+    )
+    SELECT *
+    FROM michael_percentages
+    ORDER BY michael_pct DESC
+    LIMIT 1;
+
     SELECT
-        state,
-        SUM(births) AS michael_births
+        year,
+        gender,
+        SUM(births) AS total_michaels
     FROM names
     WHERE name = 'Michael'
-    GROUP BY state
-),
-total_by_state AS (
-    SELECT
-        state,
-        SUM(births) AS total_births
-    FROM names
-    GROUP BY state
-),
-michael_percentages AS (
-    SELECT
-        m.state,
-        m.michael_births,
-        t.total_births,
-        ROUND(100.0 * m.michael_births::numeric / t.total_births, 4) AS michael_pct
-    FROM michaels_by_state m
-    JOIN total_by_state t ON m.state = t.state
-)
-SELECT *
-FROM michael_percentages
-ORDER BY michael_pct DESC
-LIMIT 1;
-
-SELECT
-    year,
-    gender,
-    SUM(births) AS total_michaels
-FROM names
-WHERE name = 'Michael'
-GROUP BY year, gender
-ORDER BY total_michaels DESC
-LIMIT 5;
+    GROUP BY year, gender
+    ORDER BY total_michaels DESC
+    LIMIT 5;
 
 
 

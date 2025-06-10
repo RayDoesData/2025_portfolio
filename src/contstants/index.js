@@ -226,7 +226,7 @@ export const myProjects = [
 export const mySocials = [
   {
     name: "Linkedin",
-    href: "www.linkedin.com/in/ray-fong01",
+    href: "https://www.linkedin.com/in/ray-fong01/",
     icon: "assets/socials/linkedIn.svg",
   },
   {
@@ -244,7 +244,7 @@ export const experiences = [
     contents: [
       "Implemented SEO strategies increasing organic traffic by 12% within six months",
       "Developed dashboards to visualize KPIs, improving data accessibility and comprehension.",
-      "✅ Use industry-leading tools like MySQL, Python, Slack, Visual Studio and more",
+      "✅ Use industry-leading tools like PostgreSQL, Python, PowerBI, Slack, Visual Studio and more",
       "✅ Monitor user behavior, performance trends, and present project objectives.",
     ],
   },
@@ -256,6 +256,7 @@ export const experiences = [
       "Managed AR/AP reconciliation, budget auditing, and identified financial discrepancies.",
       "Created project tracking dashboards to support cross-team communication.",
       "✅ Write testable code, create unit tests, review PRs, and contribute documentation.",
+      "✅ Use Excel to track projects and promote information visability.",
       "✅ Assist in project management and tasks like scheduling, deliveries, etc.",
     ],
   },
