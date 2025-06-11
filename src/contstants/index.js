@@ -36,7 +36,7 @@ export const myProjects = [
       },
     ],
   },
-  {
+  
   //   id: 2,
   //   title: "Authentication & Authorization System",
   //   description:
