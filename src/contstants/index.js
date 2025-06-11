@@ -1,42 +1,42 @@
 export const myProjects = [
-  // {
-  //   id: 1,
-  //   title: "E-commerce Platform",
-  //   description:
-  //     "Facilitates purchases from international websites like Amazon and eBay, allowing customers to shop from these sites and have products delivered domestically.",
-  //   subDescription: [
-  //     "Built a scalable application with ASP.NET Core MVC, integrating global platforms like Amazon for domestic delivery.",
-  //     "Implemented secure authentication and database management using ASP.NET Core Identity and Entity Framework Core.",
-  //     "Designed a responsive frontend with Tailwind CSS, enhancing user experience.",
-  //     "Added payment systems, localization, and product filtering for functionality improvements.",
-  //   ],
-  //   href: "",
-  //   logo: "",
-  //   image: "assets/projects/accessories.jpg",
-  //   tags: [
-  //     {
-  //       id: 1,
-  //       name: "C#",
-  //       path: "assets/logos/csharp.svg",
-  //     },
-  //     {
-  //       id: 2,
-  //       name: ".Net",
-  //       path: "assets/logos/dotnet.svg",
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "Ef Core",
-  //       path: "assets/logos/efcore.png",
-  //     },
-  //     {
-  //       id: 4,
-  //       name: "TailwindCSS",
-  //       path: "assets/logos/tailwindcss.svg",
-  //     },
-  //   ],
-  // },
-  // {
+  {
+    id: 1,
+    title: "E-commerce Platform",
+    description:
+      "Facilitates purchases from international websites like Amazon and eBay, allowing customers to shop from these sites and have products delivered domestically.",
+    subDescription: [
+      "Built a scalable application with ASP.NET Core MVC, integrating global platforms like Amazon for domestic delivery.",
+      "Implemented secure authentication and database management using ASP.NET Core Identity and Entity Framework Core.",
+      "Designed a responsive frontend with Tailwind CSS, enhancing user experience.",
+      "Added payment systems, localization, and product filtering for functionality improvements.",
+    ],
+    href: "",
+    logo: "",
+    image: "assets/projects/accessories.jpg",
+    tags: [
+      {
+        id: 1,
+        name: "C#",
+        path: "assets/logos/csharp.svg",
+      },
+      {
+        id: 2,
+        name: ".Net",
+        path: "assets/logos/dotnet.svg",
+      },
+      {
+        id: 3,
+        name: "Ef Core",
+        path: "assets/logos/efcore.png",
+      },
+      {
+        id: 4,
+        name: "TailwindCSS",
+        path: "assets/logos/tailwindcss.svg",
+      },
+    ],
+  },
+  {
   //   id: 2,
   //   title: "Authentication & Authorization System",
   //   description:
@@ -242,9 +242,10 @@ export const experiences = [
     job: "MUSE",
     date: "June 2023 - Present",
     contents: [
-      "Implemented SEO strategies increasing organic traffic by 12% within six months",
-      "Developed dashboards to visualize KPIs, improving data accessibility and comprehension.",
-      "✅ Use industry-leading tools like PostgreSQL, Python, PowerBI, AWS, and more",
+      "Used SQL and Python to clean and analyze large datasets, develop insights, and automate reports that surfaced user behavior trends.",
+      "Built Power BI dashboards to track KPIs and improve engagement.",
+      "Supported SEO with Google Analytics and SEMrush, raising organic traffic 12%.",
+      "✅ Use industry-leading tools like PostgreSQL, Python, PowerBI, Azure, and more",
       "✅ Monitor user behavior, performance trends, and present project objectives.",
     ],
   },
@@ -255,7 +256,6 @@ export const experiences = [
     contents: [
       "Managed AR/AP reconciliation, budget auditing, and identified financial discrepancies.",
       "Created project tracking dashboards to support cross-team communication.",
-      "✅ Write testable code, create unit tests, review PRs, and contribute documentation.",
       "✅ Use Excel to track projects and promote information visability.",
       "✅ Assist in project management and tasks like scheduling, deliveries, etc.",
     ],
