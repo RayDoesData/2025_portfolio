@@ -8,7 +8,7 @@ const About = () => {
   const myName = import.meta.env.VITE_MY_NAME;
   const myEmail = import.meta.env.VITE_MY_EMAIL;
   const bio =
-    "I've spent the past 2 years developing my skills in data analysis and data visualization to provide practical and accurate insights.";
+    "I've spent the past 2 years developing my skills in data analysis, science, and visualization to provide practical, accurate insights you can use and see.";
   const locationName = "South Carolina, USA";
 
   const grid2Container = useRef();
@@ -109,11 +109,11 @@ const About = () => {
         {/* Grid 5 - Tech Stack */}
         <div className="grid-default-color grid-5">
           <div className="z-10 w-[50%]">
-            <p className="headtext">See What I Can Do</p>
+            <p className="headtext">Check me out!</p>
             <p className="subtext">
               To see my skills in action, please see my YouTube channel
-              and GitHub. Let's connect professionally on LinkedIn!
-              All are linked at the bottom of the page.
+              and the projects below. Let's connect professionally on LinkedIn!
+              Github and socials are linked at the bottom of the page.
             </p>
           </div>
           <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">

@@ -1,14 +1,14 @@
 export const myProjects = [
   {
     id: 1,
-    title: "E-commerce Platform",
+    title: "U.S. Baby Names 1980-2010",
+    repoHref: "https://github.com/RayDoesData/portfolio/tree/main/sql",
+    videoHref: "https://youtu.be/4hCrP-TYsHQ?si=vGbiZx7878Coj0nz",
     description:
-      "Facilitates purchases from international websites like Amazon and eBay, allowing customers to shop from these sites and have products delivered domestically.",
+      "Cleaned, imported, and analyzed baby name trends in the U.S. from 1980 to 2010 using PostgreSQL and Python.",
     subDescription: [
-      "Built a scalable application with ASP.NET Core MVC, integrating global platforms like Amazon for domestic delivery.",
-      "Implemented secure authentication and database management using ASP.NET Core Identity and Entity Framework Core.",
-      "Designed a responsive frontend with Tailwind CSS, enhancing user experience.",
-      "Added payment systems, localization, and product filtering for functionality improvements.",
+      "Cleaned over 2 million records.",
+      "Wrote scalable query templates.",
     ],
     href: "",
     logo: "",
@@ -16,27 +16,27 @@ export const myProjects = [
     tags: [
       {
         id: 1,
-        name: "C#",
-        path: "assets/logos/csharp.svg",
+        name: "PostgreSQL",
+        path: "assets/logos/postgres.svg",
       },
       {
         id: 2,
-        name: ".Net",
-        path: "assets/logos/dotnet.svg",
+        name: "Python",
+        path: "assets/logos/python.png",
       },
       {
         id: 3,
-        name: "Ef Core",
-        path: "assets/logos/efcore.png",
+        name: "VS Code",
+        path: "assets/logos/visualstudiocode.svg",
       },
       {
         id: 4,
-        name: "TailwindCSS",
-        path: "assets/logos/tailwindcss.svg",
+        name: "Tableau",
+        path: "assets/logos/tableau.svg",
       },
     ],
   },
-  
+]
   //   id: 2,
   //   title: "Authentication & Authorization System",
   //   description:
@@ -221,7 +221,7 @@ export const myProjects = [
   //     },
   //   ],
   // },
-];
+;
 
 export const mySocials = [
   {
