@@ -1,47 +1,48 @@
-import { myProjects } from "../contstants";
+import React from "react";
 
-const Projects = () => {
+const Project = ({ title, description, tools, previewImg, repoLink, videoLink }) => {
   return (
-    <section className="relative c-space section-spacing">
-      <h2 className="text-heading">My Projects</h2>
-      <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-12 h-[1px] w-full" />
-      
-      <div className="mt-8 space-y-6">
-        {myProjects.map((project) => (
-          <div key={project.id} className="text-neutral-300">
-            <h3 className="text-xl font-semibold mb-1 hover:text-white transition-all duration-300">
-              <a
-                href={project.repoHref}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {project.title}
-              </a>
-            </h3>
-            <div className="flex gap-4 text-sm text-accent">
-              <a
-                href={project.repoHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:underline"
-              >
-                View Project Repo →
-              </a>
-              <a
-                href={project.videoHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:underline"
-              >
-                Watch Walkthrough →
-              </a>
-            </div>
-          </div>
-        ))}
+    <div className="relative w-full h-56 rounded-lg overflow-hidden shadow-lg group">
+      {/* Background Image */}
+      <img
+        src={previewImg}
+        alt={title}
+        className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
+      />
+
+      {/* Overlay Info */}
+      <div className="absolute inset-0 bg-black/60 p-4 flex flex-col justify-end backdrop-blur-sm text-white">
+        <h3 className="text-lg font-semibold mb-1">{title}</h3>
+        <p className="text-sm text-neutral-300">{description}</p>
+        <p className="text-xs text-neutral-400 mt-1">Tools: {tools?.join(", ")}</p>
+
+        {/* Links */}
+        <div className="flex gap-4 mt-3 text-sm">
+          {repoLink && (
+            <a
+              href={repoLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-neutral-300"
+            >
+              View Project →
+            </a>
+          )}
+          {videoLink && (
+            <a
+              href={videoLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-neutral-300"
+            >
+              Watch Walkthrough →
+            </a>
+          )}
+        </div>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default Projects;
+export default Project;
 
