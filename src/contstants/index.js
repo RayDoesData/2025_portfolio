@@ -7,7 +7,7 @@ export const myProjects = [
     description:
       "Cleaned, imported, and analyzed baby name trends in the U.S. from 1980 to 2010 using PostgreSQL and Python.",
     subDescription: [
-      "Cleaned over 2 million records.",
+      "Processed over 2 million records.",
       "Wrote scalable query templates.",
     ],
     href: "",

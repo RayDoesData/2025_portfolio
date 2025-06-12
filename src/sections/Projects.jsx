@@ -3,15 +3,15 @@ import { myProjects } from "../contstants";
 
 const Projects = () => {
   return (
-    <section className="relative c-space section-spacing">
+    <section className="relative c-space py-12">
       <h2 className="text-heading">My Projects</h2>
-      <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-12 h-[1px] w-full" />
+      <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-8 h-[1px] w-full" />
 
-      <div className="grid gap-6 mt-6">
+      <div className="grid gap-6 mt-4">
         {myProjects.map((project) => (
           <div
             key={project.id}
-            className="relative w-full h-56 rounded-lg overflow-hidden shadow-lg group"
+            className="relative w-full h-80 rounded-lg overflow-hidden shadow-lg group"
           >
             {/* Background Image */}
             <img
@@ -25,8 +25,17 @@ const Projects = () => {
               <h3 className="text-lg font-semibold mb-1">{project.title}</h3>
               <p className="text-sm text-neutral-300">{project.description}</p>
 
+              {/* Sub-description highlights */}
+              {project.subDescription && (
+                <ul className="mt-2 text-xs text-neutral-300 list-disc list-inside space-y-1">
+                  {project.subDescription.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+              )}
+
               {/* Tags Display */}
-              <div className="flex flex-wrap items-center gap-2 mt-2">
+              <div className="flex flex-wrap items-center gap-2 mt-3">
                 <span className="text-xs text-neutral-400 mr-2">Tools:</span>
                 {project.tags?.map((tag) => (
                   <div key={tag.id} className="flex items-center gap-1">
