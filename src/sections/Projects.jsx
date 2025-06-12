@@ -3,7 +3,7 @@ import { myProjects } from "../contstants";
 
 const Projects = () => {
   return (
-    <section className="relative c-space pb-2"> {/* Adjust spacing here */}
+    <section className="relative c-space pb-4"> {/* Adjust spacing here */}
       <h2 className="text-heading mb-6">My Projects</h2>
 
       <div className="w-full flex flex-col gap-8">
