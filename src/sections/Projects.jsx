@@ -3,28 +3,37 @@ import { myProjects } from "../contstants";
 
 const Projects = () => {
   return (
-    <section className="c-space py-12" id="projects">
-      <h2 className="text-3xl font-bold text-white mb-8 text-center">My Projects</h2>
+    <section className="w-full section-spacing pb-10"> {/* Adjust spacing here */}
+      <h2 className="text-heading mb-6">My Projects</h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="w-full flex flex-col gap-8">
         {myProjects.map((project) => (
           <div
             key={project.id}
-            className="relative h-48 rounded-lg overflow-hidden shadow-md group"
+            className="relative w-full h-56 rounded-lg overflow-hidden shadow-lg group"
           >
-            {/* Background Image */}
+            {/* Full-Width Background Image */}
             <img
               src={project.image}
               alt={project.title}
-              className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
 
-            {/* Overlay Info */}
+            {/* Banner Overlay */}
             <div className="absolute inset-0 bg-black/60 p-4 flex flex-col justify-end backdrop-blur-sm text-white">
-              <h3 className="text-lg md:text-xl font-semibold mb-1">{project.title}</h3>
-              <p className="text-sm md:text-base text-neutral-300">{project.description}</p>
+              <h3 className="text-lg font-semibold mb-1">{project.title}</h3>
+              <p className="text-sm text-neutral-300">{project.description}</p>
 
-              {/* Tags */}
+              {/* Sub Description (Bullets) */}
+              {project.subDescription && (
+                <ul className="list-disc list-inside text-xs text-neutral-400 mt-1">
+                  {project.subDescription.map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
+                </ul>
+              )}
+
+              {/* Tools / Tags */}
               <div className="flex flex-wrap items-center gap-2 mt-2">
                 <span className="text-xs text-neutral-400 mr-2">Tools:</span>
                 {project.tags?.map((tag) => (
@@ -36,7 +45,9 @@ const Projects = () => {
                         className="w-4 h-4 object-contain"
                       />
                     )}
-                    <span className="text-xs text-neutral-300">{tag.name}</span>
+                    <span className="text-xs text-neutral-300">
+                      {tag.name}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -73,3 +84,5 @@ const Projects = () => {
 };
 
 export default Projects;
+
+
