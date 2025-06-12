@@ -33,7 +33,7 @@ const Footer = () => {
           </a>
         ))}
       </div>
-      <p>© {currentYear} {siteName} All Rights Reserved</p>
+      <p>© {currentYear} All Rights Reserved</p>
     </section>
   );
 };
